@@ -1,0 +1,2 @@
+cd ..
+dashing new tqmJenkins

@@ -71,6 +71,7 @@ class Dashing.Buildhistory extends Dashing.Widget
       disabled_anime: "#D8D8D8"
       aborted_anime: "#D8D8D8"
       nobuilt_anime: "#D8D8D8"
+      yellow_anime: "#FACC2E"
     
     #remove child elements of previously rendered canvas object
     if $("#buildhistorychart")

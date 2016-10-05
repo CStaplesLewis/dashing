@@ -12,8 +12,10 @@ JENKINS_AUTH = {
 # the key of this mapping must be a unique identifier for your job, the according value must be the name that is specified in jenkins
 job_mapping = {
   'JOB1' => { :job => 'FC-811-Create_DB'},
-  'JOB2' => { :job => 'FC-811-Smoke_Test', :pre_job => 'FC-811-Create_DB'},
+  'JOB2' => { :job => 'FC-811-Smoke_Test'},
   'JOB3' => { :job => 'Test-On-Demand (8.11)'},
+  'JOB4' => { :job => 'Install VM Revert'},
+  'JOB5' => { :job => 'FLOWCAL Installer'},
 }
 
 def get_number_of_failing_tests(job_name)

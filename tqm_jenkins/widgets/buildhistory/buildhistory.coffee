@@ -58,20 +58,20 @@ class Dashing.Buildhistory extends Dashing.Widget
     #here, they all map to the same sample colour for simplicity
     
     @jenkins_job_status_colour_map =
-      red: "#FE2E2E"
-      yellow: "#FACC2E"
-      blue: "#64FE2E"
+      red: "#D26771"
+      yellow: "#eddb48"
+      blue: "#96bf48"
       grey: "#A4A4A4"
-      disabled: "#6E6E6E"
-      aborted: "#6E6E6E"
-      nobuilt: "#6E6E6E"
-      red_anime: "#D8D8D8"
-      blue_anime: "#D8D8D8"
-      grey_anime: "#D8D8D8"
-      disabled_anime: "#D8D8D8"
-      aborted_anime: "#D8D8D8"
-      nobuilt_anime: "#D8D8D8"
-      yellow_anime: "#FACC2E"
+      disabled: "#999"
+      aborted: "#999"
+      nobuilt: "#999"
+      red_anime: "#D26771"
+      blue_anime: "#96bf48"
+      grey_anime: "#999"
+      disabled_anime: "#999"
+      aborted_anime: "#999"
+      nobuilt_anime: "#999"
+      yellow_anime: "#eddb48"
     
     #remove child elements of previously rendered canvas object
     if $("#buildhistorychart")
@@ -134,11 +134,11 @@ class Dashing.Buildhistory extends Dashing.Widget
 
     #job title text font
     txt_attributes =
-    font: "8px Fontin-Sans, Arial"
+    font: "15px Fontin-Sans, Arial"
     stroke: "none"
-    fill: "#000"
+    fill: "#000000"
     "text-anchor": "start"
-    opacity: 0.03
+    opacity: 1.00    
 
     #render job title text
-    @raphael_canvas.text(row_x, row_y + (height / 2), title).attr txt_attributes
+    @raphael_canvas.text(row_x, row_y + (5), title).attr txt_attributes

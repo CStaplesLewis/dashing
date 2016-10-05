@@ -54,10 +54,10 @@ job_mapping.each do |title, jenkins_project|
     if build_info["building"]
       current_status = "BUILDING"
       percent = get_completion_percentage(jenkins_project[:job])
-    elsif jenkins_project[:pre_job]
-      pre_build_info = get_json_for_job(jenkins_project[:pre_job])
-      current_status = "PREBUILD" if pre_build_info["building"]
-      percent = get_completion_percentage(jenkins_project[:pre_job])
+#    elsif jenkins_project[:pre_job]
+#      pre_build_info = get_json_for_job(jenkins_project[:pre_job])
+#      current_status = "PREBUILD" if pre_build_info["building"]
+#      percent = get_completion_percentage(jenkins_project[:pre_job])
     end
 
     send_event(title, {

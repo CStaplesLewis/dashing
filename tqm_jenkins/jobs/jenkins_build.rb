@@ -12,7 +12,8 @@ JENKINS_AUTH = {
 # the key of this mapping must be a unique identifier for your job, the according value must be the name that is specified in jenkins
 job_mapping = {
   'JOB1' => { :job => 'FC-811-Create_DB'},
-  'JOB2' => { :job => 'FC-811-Smoke_Test'}
+  'JOB2' => { :job => 'FC-811-Smoke_Test'},
+  'JOB3' => { :job => 'Test-On-Demand (8.11)'},
 }
 
 def get_number_of_failing_tests(job_name)
@@ -34,7 +35,7 @@ end
 def get_json_for_job(job_name, build = 'lastBuild')
   job_name = URI.encode(job_name)
   http = Net::HTTP.new(JENKINS_URI.host, JENKINS_URI.port)
-  request = Net::HTTP::Get.new("/job/#{job_name}/#{build}/api/json")
+  request = Net::HTTP::Get.new("/job/#{job_name}/#{build}/api/json")  
   if JENKINS_AUTH['name']
     request.basic_auth(JENKINS_AUTH['name'], JENKINS_AUTH['password'])
   end
